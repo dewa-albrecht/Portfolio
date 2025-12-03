@@ -1,0 +1,465 @@
+/* =======================================
+   BASE STYLES (Grundlegende Stile)
+======================================= */
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+img,
+video {
+  width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =======================================
+   STARTSEITE LAYOUT
+======================================= */
+
+.body-startseite {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 100px auto;
+}
+
+/* =======================================
+   NAVIGATION BAR
+======================================= */
+
+.nav {
+  display: grid;
+  align-items: center;
+  padding: 15px 15px;
+  top: 0;
+  position: sticky;
+
+  border-bottom: 1px solid rgb(0, 0, 0);
+  z-index: 100;
+  background-color: black;
+
+  grid-template-columns: auto 1fr auto;
+}
+
+.nav-left:hover,
+.nav-right:hover {
+  color: grey;
+  cursor: pointer;
+}
+
+.nav-left {
+  grid-column: 1 / 2;
+}
+
+.nav-right {
+  grid-column: 3 / 4;
+}
+
+/* =======================================
+   PROJECT PAGE (Generische Elemente)
+======================================= */
+
+.project-grid-projekt2 {
+  display: grid;
+  padding: 0 15px 15px 15px;
+  gap: 15px;
+}
+
+/* Zuweisung der Grid-Area für generischen Titel/Text */
+.project-grid_title {
+  grid-area: title;
+}
+
+.project-grid_title h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.project-grid_text {
+  grid-area: text;
+}
+.project-grid_text p {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* =======================================
+  BLICKWECHSEL (Spezifische Zuweisungen)
+======================================= */
+
+.project-gridblickwechsel_Image-79 {
+  grid-area: Image-79;
+}
+
+.project-gridblickwechsel_video-1 {
+  grid-area: video-1;
+}
+
+.project-gridblickwechsel_Image-42 {
+  grid-area: Image-42;
+}
+
+.project-gridblickwechsel_Image-43 {
+  grid-area: Image-43;
+}
+
+.project-gridblickwechsel_Image-44 {
+  grid-area: Image-44;
+}
+
+.project-gridblickwechsel_Image-45 {
+  grid-area: Image-45;
+}
+
+.project-gridblickwechsel_Image-75 {
+  grid-area: Image-75;
+}
+
+.project-gridblickwechsel_title {
+  grid-area: title;
+}
+
+.project-gridblickwechsel_text {
+  grid-area: text;
+}
+
+/* =======================================
+  BMW (Spezifische Zuweisungen)
+======================================= */
+.project-gridbmw_Image-4 {
+  grid-area: Image-4;
+}
+
+/* =======================================
+  Farben (Spezifische Zuweisungen)
+======================================= */
+/* ZUWEISUNGEN, DAMIT DAS FARBEN-GRID FUNKTIONIERT */
+.project-gridfarben_Image-35 {
+  grid-area: Image-35;
+}
+.project-gridfarben_Image-34 {
+  grid-area: Image-34;
+}
+.project-gridfarben_Image-36 {
+  grid-area: Image-36;
+}
+.project-gridfarben_Image-37 {
+  grid-area: Image-37;
+}
+.project-gridfarben_Image-38 {
+  grid-area: Image-38;
+}
+.project-gridfarben_Image-39 {
+  grid-area: Image-39;
+}
+.project-gridfarben_Image-40 {
+  grid-area: Image-40;
+}
+
+/* =======================================
+  London (Spezifische Zuweisungen)
+======================================= */
+/* Grid-Area-Zuweisungen für London-Bilder */
+.project-gridlondon_Image-28 {
+  grid-area: Image-28;
+}
+.project-gridlondon_Image-21 {
+  grid-area: Image-21;
+}
+.project-gridlondon_Image-27 {
+  grid-area: Image-27;
+}
+.project-gridlondon_Image-46 {
+  grid-area: Image-46;
+}
+.project-gridlondon_Image-48 {
+  grid-area: Image-48;
+}
+.project-gridlondon_Image-49 {
+  grid-area: Image-49;
+}
+.project-gridlondon_Image-50 {
+  grid-area: Image-50;
+}
+.project-gridlondon_Image-52 {
+  grid-area: Image-52;
+}
+.project-gridlondon_Image-53 {
+  grid-area: Image-53;
+}
+.project-gridlondon_Image-54 {
+  grid-area: Image-54;
+}
+.project-gridlondon_Image-55 {
+  grid-area: Image-55;
+}
+.project-gridlondon_Image-58 {
+  grid-area: Image-58;
+}
+.project-gridlondon_Image-59 {
+  grid-area: Image-59;
+}
+.project-gridlondon_Image-60 {
+  grid-area: Image-60;
+}
+.project-gridlondon_Image-61 {
+  grid-area: Image-61;
+}
+.project-gridlondon_Image-67 {
+  grid-area: Image-67;
+}
+
+/* =======================================
+  Lutzwoche (Spezifische Zuweisungen)
+======================================= */
+/* Grid-Area-Zuweisungen für Lutzwoche-Bilder */
+.project-gridlutzwoche_Image-24 {
+  grid-area: Image-24;
+}
+.project-gridlutzwoche_Image-5 {
+  grid-area: Image-5;
+}
+.project-gridlutzwoche_Image-6 {
+  grid-area: Image-6;
+}
+.project-gridlutzwoche_Image-7 {
+  grid-area: Image-7;
+}
+.project-gridlutzwoche_Image-23 {
+  grid-area: Image-23;
+}
+
+/* =======================================
+  Masterabschluss (Spezifische Zuweisungen)
+======================================= */
+/* Grid-Area-Zuweisungen für Masterabschluss-Bilder */
+.project-gridmasterabschluss_Image-78 {
+  grid-area: Image-78;
+}
+.ptojek-gridmasterabschluss_video-2 {
+  grid-area: video-2;
+}
+.project-gridmasterabschluss_Image-12 {
+  grid-area: Image-12;
+}
+.project-gridmasterabschluss_Image-13 {
+  grid-area: Image-13;
+}
+
+/* =======================================
+  Paris (Spezifische Zuweisungen)
+======================================= */
+.project-gridparis_Image-32 {
+  grid-area: Image-32;
+}
+
+.project-gridparis_Image-63 {
+  grid-area: Image-63;
+}
+.project-gridparis_Image-64 {
+  grid-area: Image-64;
+}
+.project-gridparis_Image-65 {
+  grid-area: Image-65;
+}
+.project-gridparis_Image-67 {
+  grid-area: Image-67;
+}
+.project-gridparis_Image-68 {
+  grid-area: Image-68;
+}
+.project-gridparis_Image-69 {
+  grid-area: Image-69;
+}
+.project-gridparis_Image-70 {
+  grid-area: Image-70;
+}
+
+/* =======================================
+  Plattencover (Spezifische Zuweisungen)
+======================================= */
+.project-gridplattencover_Image-26 {
+  grid-area: Image-26;
+}
+.project-gridplattencover_Image-25 {
+  grid-area: Image-25;
+}
+.project-gridplattencover_Image-71 {
+  grid-area: Image-71;
+}
+.project-gridplattencover_Image-72 {
+  grid-area: Image-72;
+}
+.project-gridplattencover_Image-73 {
+  grid-area: Image-73;
+}
+.project-gridplattencover_Image-74 {
+  grid-area: Image-74;
+}
+
+/* =======================================
+About me
+======================================= */
+.project-gridplattencover_Image {
+  grid-area: Image;
+}
+
+/* =======================================
+   SLIDER STYLES
+======================================= */
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide {
+  width: auto !important;
+}
+
+.slider-item {
+  height: 100%;
+  /* object-fit: contain; */
+}
+
+/* =======================================
+   Responsiveness & Grid Definitionen
+======================================= */
+/* Hier werden die Raster-Layouts für die verschiedenen Projekte definiert */
+
+.project-gridblickwechsel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+  grid-template-areas:
+    "Image-79 Image-79 Image-79 Image-79"
+    ".  video-1 video-1 ."
+    "Image-45 Image-45 Image-42 Image-42"
+    "Image-43 Image-43 Image-44 Image-44"
+    "Image-75 Image-75 Image-75 Image-75"
+    "title title title title"
+    "text text text .";
+}
+
+.project-gridbmw {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+  grid-template-areas:
+    "Image-4 Image-4 Image-4 Image-4"
+    "title title title title"
+    "text text text .";
+}
+
+.project-gridfarben {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+  grid-template-areas:
+    "Image-35 Image-35 Image-35 Image-35"
+    "Image-34 Image-34 Image-36 Image-36"
+    "Image-37 Image-37 Image-38 Image-38"
+    "Image-39 Image-39 Image-40 Image-40"
+    "title title title title"
+    "text text text .";
+}
+
+.project-gridlondon {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+  /* Grid-Layout für London (2 Bilder pro Reihe) */
+  grid-template-areas:
+    "Image-28 Image-28 Image-28 Image-28"
+    " Image-46 Image-46 Image-58 Image-58"
+    "Image-59 Image-59 Image-60 Image-60"
+    "Image-67 Image-67 Image-53 Image-53"
+    "Image-54 Image-54 Image-55 Image-55"
+    "Image-52 Image-52 Image-48 Image-48"
+    "Image-49 Image-49 Image-50 Image-50"
+    "Image-21 Image-21 Image-61 Image-61"
+    "Image-27 Image-27 Image-27 Image-27"
+    "title title title title"
+    "text text text .";
+}
+
+.project-gridlutzwoche {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+  /* Grid-Layout für Lutzwoche (2 Bilder pro Reihe) */
+  grid-template-areas:
+    "Image-24 Image-24 Image-24 Image-24"
+    "Image-5 Image-5 Image-6 Image-6"
+    "Image-7 Image-7 Image-23 Image-23"
+    "title title title title"
+    "text text text .";
+}
+
+.project-gridmasterabschluss {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+  /* Grid-Layout für Masterabschluss (1 großes Bild oben, dann 2 kleine) */
+  grid-template-areas:
+    "Image-78 Image-78 Image-78 Image-78"
+    ". video-2 video-2 ."
+    "Image-12 Image-12 Image-13 Image-13"
+    "title title title title"
+    "text text text .";
+}
+
+.project-gridparis {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+  /* NEU: Grid-Layout für Paris (1 großes Bild oben, dann alle anderen 2er-Paare) */
+  grid-template-areas:
+    "Image-32 Image-32 Image-32 Image-32"
+    "Image-64 Image-64 Image-65 Image-65"
+    "Image-67 Image-67 Image-68 Image-68"
+    "Image-69 Image-69 Image-70 Image-70"
+    "Image-63 Image-63 Image-63 Image-63"
+    "title title title title"
+    "text text text .";
+}
+
+.project-gridplattencover {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+  /* Grid-Layout für Plattencover: 1 volles Bild, dann 5 weitere in Paaren */
+  grid-template-areas:
+    "Image-26 Image-26 Image-26 Image-26"
+    "Image-25 Image-25 Image-80 Image-80"
+    "title title title title"
+    "text text text .";
+}
+
+.project-gridaboutme {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+  /* Grid-Layout für Plattencover: 1 volles Bild, dann 5 weitere in Paaren */
+  grid-template-areas:
+    "Image Image Image Image"
+    "title title title title"
+    "text text text .";
+}
