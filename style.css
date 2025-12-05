@@ -27,9 +27,9 @@ a {
 ======================================= */
 
 .body-startseite {
-  height: 100vh;
+  height: 98vh;
   display: grid;
-  grid-template-rows: 100px auto;
+  grid-template-rows: 30px auto;
 }
 
 /* =======================================
@@ -39,7 +39,7 @@ a {
 .nav {
   display: grid;
   align-items: center;
-  padding: 15px 15px;
+  padding: 10px 10px;
   top: 0;
   position: sticky;
 
@@ -58,6 +58,11 @@ a {
 
 .nav-left {
   grid-column: 1 / 2;
+}
+
+.nav-center {
+  grid-column: 2 / 3;
+  text-align: center;
 }
 
 .nav-right {
@@ -99,6 +104,9 @@ a {
 .project-gridblickwechsel_Image-79 {
   grid-area: Image-79;
 }
+.project-gridblickwechsel_image-5 {
+  grid-area: image-5;
+}
 
 .project-gridblickwechsel_video-1 {
   grid-area: video-1;
@@ -135,8 +143,15 @@ a {
 /* =======================================
   BMW (Spezifische Zuweisungen)
 ======================================= */
-.project-gridbmw_Image-4 {
-  grid-area: Image-4;
+.project-gridbmw_image-16 {
+  grid-area: image-16;
+  margin-right: 20;
+}
+.project-gridbmw_image-7 {
+  grid-area: image-7;
+}
+.project-gridbmw_image-8 {
+  grid-area: image-8;
 }
 
 /* =======================================
@@ -145,6 +160,8 @@ a {
 /* ZUWEISUNGEN, DAMIT DAS FARBEN-GRID FUNKTIONIERT */
 .project-gridfarben_Image-35 {
   grid-area: Image-35;
+  margin: 10;
+  margin-left: 40;
 }
 .project-gridfarben_Image-34 {
   grid-area: Image-34;
@@ -154,6 +171,8 @@ a {
 }
 .project-gridfarben_Image-37 {
   grid-area: Image-37;
+  margin-top: -30px;
+  margin-bottom: -30px;
 }
 .project-gridfarben_Image-38 {
   grid-area: Image-38;
@@ -169,12 +188,7 @@ a {
   London (Spezifische Zuweisungen)
 ======================================= */
 /* Grid-Area-Zuweisungen für London-Bilder */
-.project-gridlondon_Image-28 {
-  grid-area: Image-28;
-}
-.project-gridlondon_Image-21 {
-  grid-area: Image-21;
-}
+
 .project-gridlondon_Image-27 {
   grid-area: Image-27;
 }
@@ -187,9 +201,6 @@ a {
 .project-gridlondon_Image-49 {
   grid-area: Image-49;
 }
-.project-gridlondon_Image-50 {
-  grid-area: Image-50;
-}
 .project-gridlondon_Image-52 {
   grid-area: Image-52;
 }
@@ -199,32 +210,24 @@ a {
 .project-gridlondon_Image-54 {
   grid-area: Image-54;
 }
-.project-gridlondon_Image-55 {
-  grid-area: Image-55;
-}
 .project-gridlondon_Image-58 {
   grid-area: Image-58;
 }
-.project-gridlondon_Image-59 {
-  grid-area: Image-59;
-}
-.project-gridlondon_Image-60 {
-  grid-area: Image-60;
+.project-gridlondon_Image-57 {
+  grid-area: Image-57;
 }
 .project-gridlondon_Image-61 {
   grid-area: Image-61;
 }
-.project-gridlondon_Image-67 {
-  grid-area: Image-67;
+.project-gridlondon_Image-47 {
+  grid-area: Image-47;
 }
 
 /* =======================================
   Lutzwoche (Spezifische Zuweisungen)
 ======================================= */
 /* Grid-Area-Zuweisungen für Lutzwoche-Bilder */
-.project-gridlutzwoche_Image-24 {
-  grid-area: Image-24;
-}
+
 .project-gridlutzwoche_Image-5 {
   grid-area: Image-5;
 }
@@ -245,21 +248,18 @@ a {
 .project-gridmasterabschluss_Image-78 {
   grid-area: Image-78;
 }
-.ptojek-gridmasterabschluss_video-2 {
+.project-gridmasterabschluss_video-2 {
   grid-area: video-2;
 }
 .project-gridmasterabschluss_Image-12 {
   grid-area: Image-12;
 }
-.project-gridmasterabschluss_Image-13 {
-  grid-area: Image-13;
-}
 
 /* =======================================
   Paris (Spezifische Zuweisungen)
 ======================================= */
-.project-gridparis_Image-32 {
-  grid-area: Image-32;
+.project-gridparis_Image-33 {
+  grid-area: Image-33;
 }
 
 .project-gridparis_Image-63 {
@@ -293,17 +293,23 @@ a {
 .project-gridplattencover_Image-25 {
   grid-area: Image-25;
 }
-.project-gridplattencover_Image-71 {
-  grid-area: Image-71;
+.project-gridplattencover_image-9 {
+  grid-area: image-9;
 }
-.project-gridplattencover_Image-72 {
-  grid-area: Image-72;
+.project-gridplattencover_image-10 {
+  grid-area: image-10;
 }
-.project-gridplattencover_Image-73 {
-  grid-area: Image-73;
+
+.project-gridplattencover_image-11 {
+  grid-area: image-11;
 }
-.project-gridplattencover_Image-74 {
-  grid-area: Image-74;
+
+.project-gridplattencover_image-12 {
+  grid-area: image-12;
+}
+
+.project-gridplattencover_image-13 {
+  grid-area: image-13;
 }
 
 /* =======================================
@@ -317,23 +323,99 @@ About me
    SLIDER STYLES
 ======================================= */
 
-.swiper {
-  width: 100%;
-}
-
 .swiper-slide {
   width: auto !important;
+}
+.swiper-slide img {
+  /* 1. WICHTIG: Stellt sicher, dass Padding IN die 100% Breite passt */
+  box-sizing: border-box;
+
+  /* 2. HIER den ABSTAND einstellen (z.B. 5px)! */
+  padding-right: 5px !important; /* Verwende !important, falls nötig, um sicherzugehen */
+
+  /* 3. Volle Breite beibehalten, aber das Padding ist jetzt enthalten */
+  width: 100%;
+
+  /* ... (Restliche Styles wie height: 100% und object-fit: contain) ... */
 }
 
 .slider-item {
   height: 100%;
-  /* object-fit: contain; */
+}
+/* ------------------------------------ */
+/* Navigation und Pfeile */
+/* ------------------------------------ */
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #666666 !important; /* Dunkelgrau */
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.swiper-button-prev:hover:after,
+.swiper-button-next:hover:after {
+  color: #999999 !important; /* Helleres Grau beim Hovern */
+}
+
+/* Blendet die Punkte (Pagination) vollständig aus */
+.swiper-pagination {
+  display: none !important;
 }
 
 /* =======================================
-   Responsiveness & Grid Definitionen
+   SLIDER HOVER OVERLAY STYLES (Titel)
 ======================================= */
-/* Hier werden die Raster-Layouts für die verschiedenen Projekte definiert */
+
+/* 1. Link-Container: Passt die Klickfläche an das Bild an */
+.slide-link {
+  position: relative;
+  display: block;
+  height: 100%;
+  /* KORREKTUR: Passt die Breite des Hover-Bereichs an den Bildinhalt an */
+  width: fit-content;
+}
+
+/* 2. Style des Titel-Overlays (Zentriert und anfangs transparent) */
+.slide-title {
+  /* Positionierung über das gesamte Bild */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Bezieht sich auf die Breite des slide-link Containers */
+  height: 100%;
+
+  /* Ausrichtung */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Style */
+  background: transparent;
+  color: white;
+  font-size: 24px;
+
+  /* Unsichtbar standardmäßig */
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* 3. Hover-Effekt: Zeige den Titel */
+.slide-link:hover .slide-title {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.slide-link .slider-item:hover + .slide-title {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* =======================================
+  Raster
+======================================= */
 
 .project-gridblickwechsel {
   display: grid;
@@ -342,12 +424,54 @@ About me
   padding: 0 15px 15px 15px;
   grid-template-areas:
     "Image-79 Image-79 Image-79 Image-79"
-    ".  video-1 video-1 ."
+    "title title title title"
+    ".  video-1 video-1 ." /* Zeile 2: Hier darf KEIN 'info' stehen */
     "Image-45 Image-45 Image-42 Image-42"
     "Image-43 Image-43 Image-44 Image-44"
     "Image-75 Image-75 Image-75 Image-75"
-    "title title title title"
-    "text text text .";
+    "info info info info"
+    ". text text ."; /* Zeile 7: HIER ist die richtige Position */
+}
+
+.project-gridblickwechsel_title {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  font-size: 12px;
+  grid-area: title;
+}
+
+.project-gridblickwechsel_text {
+  text-align: center;
+  padding-bottom: 0px;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: text;
+}
+
+.project-gridblickwechsel_info {
+  text-align: center;
+  padding-bottom: 0px;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: info;
+}
+
+.project-gridblickwechsel_text {
+  text-align: center;
+}
+
+.project-gridblickwechsel_info {
+  grid-area: info;
+  text-align: center;
+}
+
+.project-gridblickwechsel_info ul {
+  list-style-type: none; /* Entfernt die Punkte */
+  padding-left: 0; /* Entfernt den Standard-Einzug */
+  margin: 0; /* Entfernt unnötige Abstände */
 }
 
 .project-gridbmw {
@@ -356,11 +480,56 @@ About me
   gap: 15px;
   padding: 0 15px 15px 15px;
   grid-template-areas:
-    "Image-4 Image-4 Image-4 Image-4"
+    "image-16 image-16 image-16 image-16"
     "title title title title"
-    "text text text .";
+    "image-7 image-7 image-8 image-8"
+    "info info info info"
+    ". text text .";
 }
 
+.project-gridbwm_title {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  font-size: 12px;
+  grid-area: title;
+}
+
+.project-gridbwm_text {
+  text-align: center;
+  padding-bottom: 0px;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: text;
+}
+
+.project-gridbwm_info {
+  text-align: center !important;
+  padding-bottom: 0px;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: info;
+}
+
+/* --- Styling für die Info-Liste (Punkte entfernen) --- */
+
+.projekt-gridbwm_info ul {
+  list-style-type: none; /* WICHTIG: Entfernt die Punkte */
+  padding-left: 0; /* Entfernt den Standard-Einzug */
+  margin: 0; /* Entfernt unnötige Abstände */
+}
+
+/* --- Anpassung der H1-Schrift (falls du eine andere als die 12px möchtest) --- */
+
+.project-gridbwm_title h1 {
+  /* Fügt die Zentrierung hinzu und entfernt Standard-Margin des H1 */
+  text-align: inherit;
+  margin: 0;
+}
+
+/* Finde die bestehende .project-gridfarben Regel und ersetze sie damit: */
 .project-gridfarben {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -368,31 +537,108 @@ About me
   padding: 0 15px 15px 15px;
   grid-template-areas:
     "Image-35 Image-35 Image-35 Image-35"
-    "Image-34 Image-34 Image-36 Image-36"
-    "Image-37 Image-37 Image-38 Image-38"
-    "Image-39 Image-39 Image-40 Image-40"
     "title title title title"
-    "text text text .";
+    "Image-34 Image-34 Image-38  Image-38"
+    "Image-39 Image-39 Image-40 Image-40"
+    "Image-37 Image-37 Image-37 Image-37"
+    "info info info info"
+    ". text text .";
 }
 
+.project-gridfarben_info {
+  grid-area: info;
+}
+
+/* --- Styling für den Titel (Abstände und Zentrierung) --- */
+
+.project-gridfarben_title {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  font-size: 12px;
+  grid-area: title;
+}
+
+.project-gridfarben_text {
+  text-align: center;
+  padding-bottom: 0px;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: text;
+}
+
+.project-gridfarben_info {
+  text-align: center;
+  padding-bottom: 0px;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: info;
+}
+
+/* --- Styling für die Info-Liste (Punkte entfernen) --- */
+
+.project-gridfarben_info ul {
+  list-style-type: none; /* Entfernt die Punkte */
+  padding-left: 0; /* Entfernt den Standard-Einzug */
+  margin: 0; /* Entfernt unnötige Abstände */
+}
+
+/* Finde die bestehende .project-gridlondon Regel und ersetze sie damit: */
 .project-gridlondon {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
   padding: 0 15px 15px 15px;
-  /* Grid-Layout für London (2 Bilder pro Reihe) */
+
   grid-template-areas:
-    "Image-28 Image-28 Image-28 Image-28"
-    " Image-46 Image-46 Image-58 Image-58"
-    "Image-59 Image-59 Image-60 Image-60"
-    "Image-67 Image-67 Image-53 Image-53"
-    "Image-54 Image-54 Image-55 Image-55"
-    "Image-52 Image-52 Image-48 Image-48"
-    "Image-49 Image-49 Image-50 Image-50"
-    "Image-21 Image-21 Image-61 Image-61"
-    "Image-27 Image-27 Image-27 Image-27"
+    "Image-61 Image-61 Image-61 Image-61"
     "title title title title"
-    "text text text .";
+    " Image-46 Image-46 Image-57 Image-57"
+    "Image-58 Image-58 Image-58 Image-58"
+    "Image-47 Image-47 Image-53 Image-53"
+    "Image-54 Image-54 Image-54 Image-54"
+    "Image-52 Image-52 Image-49 Image-49"
+    "Image-48 Image-48 Image-48 Image-48"
+    "Image-27 Image-27 Image-27 Image-27"
+    "info info info info"
+    ". text text .";
+}
+
+.project-gridlondon_info {
+  grid-area: info;
+}
+
+.project-gridlondon_title {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  font-size: 12px;
+  grid-area: title;
+}
+
+.project-gridlondon_text {
+  text-align: center;
+  padding-bottom: 0px;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: text;
+}
+
+.project-gridlondon_info {
+  text-align: center;
+  padding-bottom: 0px;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: info;
+}
+
+.project-gridlondon_info ul {
+  list-style-type: none; /* Entfernt die Punkte */
+  padding-left: 0; /* Entfernt den Standard-Einzug */
 }
 
 .project-gridlutzwoche {
@@ -400,13 +646,40 @@ About me
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
   padding: 0 15px 15px 15px;
-  /* Grid-Layout für Lutzwoche (2 Bilder pro Reihe) */
+
   grid-template-areas:
-    "Image-24 Image-24 Image-24 Image-24"
-    "Image-5 Image-5 Image-6 Image-6"
-    "Image-7 Image-7 Image-23 Image-23"
+    "Image-23 Image-23 Image-23 Image-23"
     "title title title title"
-    "text text text .";
+    "Image-5 Image-5 Image-6 Image-6"
+    "Image-7 Image-7 Image-7 Image-7"
+    "info info info info"
+    ". text text .";
+}
+
+.project-gridlutzwoche_title {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  font-size: 12px;
+  grid-area: title;
+}
+
+.project-gridlutzwoche_text {
+  text-align: center;
+  padding-bottom: 0px;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: text;
+}
+
+.project-gridlutzwoche_info {
+  text-align: center;
+  padding-bottom: 0px;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: info;
 }
 
 .project-gridmasterabschluss {
@@ -417,10 +690,37 @@ About me
   /* Grid-Layout für Masterabschluss (1 großes Bild oben, dann 2 kleine) */
   grid-template-areas:
     "Image-78 Image-78 Image-78 Image-78"
-    ". video-2 video-2 ."
-    "Image-12 Image-12 Image-13 Image-13"
     "title title title title"
-    "text text text .";
+    ". video-2 video-2 ."
+    "Image-12 Image-12 Image-12 Image-12"
+    "info info info info"
+    ". text text .";
+}
+
+.project-gridmasterabschluss_title {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  font-size: 12px;
+  grid-area: title;
+}
+
+.project-gridmasterabschluss_text {
+  text-align: center;
+  padding-bottom: 0px;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: text;
+}
+
+.project-gridmasterabschluss_info {
+  text-align: center;
+  padding-bottom: 0px;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: info;
 }
 
 .project-gridparis {
@@ -428,15 +728,27 @@ About me
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
   padding: 0 15px 15px 15px;
-  /* NEU: Grid-Layout für Paris (1 großes Bild oben, dann alle anderen 2er-Paare) */
+  /* KORRIGIERT: Reihenfolge Titel > Info > Text */
   grid-template-areas:
-    "Image-32 Image-32 Image-32 Image-32"
-    "Image-64 Image-64 Image-65 Image-65"
-    "Image-67 Image-67 Image-68 Image-68"
-    "Image-69 Image-69 Image-70 Image-70"
-    "Image-63 Image-63 Image-63 Image-63"
+    "Image-33 Image-33 Image-33 Image-33"
     "title title title title"
-    "text text text .";
+    "Image-64 Image-64 Image-69 Image-69"
+    "Image-65 Image-65 Image-65 Image-65"
+    "Image-68 Image-68 Image-67 Image-67"
+    "Image-70 Image-70 Image-70 Image-70"
+    "Image-63 Image-63 Image-63 Image-63"
+    "info info info info"
+    ". text text .";
+}
+
+.project-gridparis_info {
+  grid-area: info; /* Diese Zuweisung ist ESSENTIELL! */
+  text-align: center;
+}
+.project-gridparis_info ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .project-gridplattencover {
@@ -447,19 +759,150 @@ About me
   /* Grid-Layout für Plattencover: 1 volles Bild, dann 5 weitere in Paaren */
   grid-template-areas:
     "Image-26 Image-26 Image-26 Image-26"
-    "Image-25 Image-25 Image-80 Image-80"
     "title title title title"
+    "image-9 image-9 image-9 image-9"
+    "image-10 image-10 image-10 image-10"
+    "image-11 image-11 image-12 image-12"
+    "image-13 image-13 image-13 image-13"
+    "Image-25 Image-25 Image-25 Image-25"
     "text text text .";
 }
 
+.project-gridplattencover_title {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  font-size: 12px;
+  grid-area: title;
+}
+
+.project-gridplattencover_text {
+  text-align: center;
+  padding-bottom: 0px;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: text;
+}
+
+.project-gridplattencover_info {
+  text-align: center;
+  padding-bottom: 0px;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0;
+  grid-area: info;
+}
+
+/* =======================================
+  About me (Raster Definitionen)
+======================================= */
+
+/* MOBILE FIRST (Standard): Alles untereinander */
 .project-gridaboutme {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 gleich große Spalten */
   gap: 15px;
   padding: 0 15px 15px 15px;
-  /* Grid-Layout für Plattencover: 1 volles Bild, dann 5 weitere in Paaren */
+
+  /* Reihenfolge: Bild -> Titel -> Text -> Sprachen -> Software */
   grid-template-areas:
-    "Image Image Image Image"
+    ". image image ." /* Bild zentriert auf 2 Spalten */
     "title title title title"
-    "text text text .";
+    "text text text text"
+    "languages languages languages languages" /* Sprachen volle Breite */
+    "software software software software"; /* Software volle Breite */
+}
+
+/* ------------------------------------------- */
+/* Zuweisungen der Areas (Hierarchisch) */
+/* ------------------------------------------- */
+.project-gridplattencover_Image {
+  /* Der Name ist irreführend, sollte umbenannt werden (z.B. .aboutme_image), aber wir nutzen den existierenden Namen */
+  grid-area: image;
+}
+
+.languages {
+  grid-area: languages;
+}
+
+.software {
+  grid-area: software;
+}
+
+/* ------------------------------------------- */
+/* DESKTOP LAYOUT (Ab 768px): Sprachen und Software nebeneinander */
+/* ------------------------------------------- */
+@media (min-width: 768px) {
+  /* Optional: Text-Styling für Desktop anpassen */
+  .project-grid_title h1 {
+    font-size: 32px;
+  }
+  .project-grid_text p {
+    font-size: 20px;
+  }
+}
+
+/* =======================================
+  ABOUT ME (NEU DEFINIERT)
+======================================= */
+
+/* 1. Generisches Styling (Beibehalten, aber hier zur Übersicht) */
+.project-grid_title {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 0;
+  grid-area: title;
+}
+.project-grid_text {
+  text-align: center;
+  grid-area: text;
+  margin: 0 auto; /* Zentriert den Textblock horizontal */
+}
+
+/* Styling für Listen (Sprachen & Software) */
+.languages,
+.software {
+  width: 90%; /* Nimmt 90% der Containerbreite ein */
+  max-width: 450px; /* Begrenzt die maximale Breite */
+  margin: 0 auto; /* Zentriert die Listen */
+}
+
+.languages h3,
+.software h3 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.languages td:last-child,
+.software td:last-child {
+  text-align: right;
+  letter-spacing: 2px;
+  border-right: none;
+}
+
+/* 3. Desktop Layout (Grid) */
+@media (min-width: 768px) {
+  /* Zuweisung der Bereiche zu den Grid-Areas */
+  .project-gridplattencover_Image {
+    grid-area: image;
+  }
+  .project-grid_title {
+    grid-area: title;
+  }
+  .project-grid_text {
+    grid-area: text;
+  }
+  .languages {
+    grid-area: languages;
+  }
+  .software {
+    grid-area: software;
+  }
+
+  /* WICHTIG: Überschreibt die maximale Breite des Textes für das Grid */
+  .project-grid_text {
+    max-width: none;
+  }
 }
