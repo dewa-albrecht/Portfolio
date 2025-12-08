@@ -27,10 +27,11 @@ a {
 ======================================= */
 
 .body-startseite {
-  height: 98vh;
+  height: 100vh;
   display: grid;
-  grid-template-rows: 30px auto;
+  grid-template-rows: 34px auto;
 }
+
 /* =======================================
    NAVIGATION BAR
 ======================================= */
@@ -63,7 +64,6 @@ a {
   grid-column: 2 / 3;
   text-align: center;
 }
-
 .nav-right {
   grid-column: 3 / 4;
 }
@@ -109,6 +109,7 @@ a {
 
 .project-gridblickwechsel_video-1 {
   grid-area: video-1;
+  margin-top: 53px;
 }
 
 .project-gridblickwechsel_Image-42 {
@@ -129,10 +130,7 @@ a {
 
 .project-gridblickwechsel_Image-75 {
   grid-area: Image-75;
-}
-
-.project-gridblickwechsel_title {
-  grid-area: title;
+  margin-top: 40px;
 }
 
 .project-gridblickwechsel_text {
@@ -164,6 +162,7 @@ a {
 }
 .project-gridfarben_Image-34 {
   grid-area: Image-34;
+  margin-top: -18px;
 }
 .project-gridfarben_Image-36 {
   grid-area: Image-36;
@@ -175,6 +174,7 @@ a {
 }
 .project-gridfarben_Image-38 {
   grid-area: Image-38;
+  margin-top: -23px;
 }
 .project-gridfarben_Image-39 {
   grid-area: Image-39;
@@ -190,9 +190,11 @@ a {
 
 .project-gridlondon_Image-27 {
   grid-area: Image-27;
+  margin-top: -160px;
 }
 .project-gridlondon_Image-46 {
   grid-area: Image-46;
+  margin-top: -20px;
 }
 .project-gridlondon_Image-48 {
   grid-area: Image-48;
@@ -214,6 +216,7 @@ a {
 }
 .project-gridlondon_Image-57 {
   grid-area: Image-57;
+  margin-top: -20px;
 }
 .project-gridlondon_Image-61 {
   grid-area: Image-61;
@@ -239,6 +242,15 @@ a {
 .project-gridlutzwoche_Image-23 {
   grid-area: Image-23;
 }
+.project-gridlutzwoche_image-17 {
+  grid-area: image-17;
+}
+.project-gridlutzwoche_image-18 {
+  grid-area: image-18;
+}
+.project-gridlutzwoche_image-19 {
+  grid-area: image-19;
+}
 
 /* =======================================
   Masterabschluss (Spezifische Zuweisungen)
@@ -249,9 +261,7 @@ a {
 }
 .project-gridmasterabschluss_video-2 {
   grid-area: video-2;
-}
-.project-gridmasterabschluss_Image-12 {
-  grid-area: Image-12;
+  margin: 50px;
 }
 
 /* =======================================
@@ -260,27 +270,32 @@ a {
 .project-gridparis_Image-33 {
   grid-area: Image-33;
 }
-
 .project-gridparis_Image-63 {
   grid-area: Image-63;
 }
 .project-gridparis_Image-64 {
   grid-area: Image-64;
+  margin: -20px;
 }
 .project-gridparis_Image-65 {
   grid-area: Image-65;
+  margin-top: -60px;
 }
 .project-gridparis_Image-67 {
   grid-area: Image-67;
+  margin-top: -40px;
 }
 .project-gridparis_Image-68 {
   grid-area: Image-68;
+  margin-top: -40px;
 }
 .project-gridparis_Image-69 {
   grid-area: Image-69;
+  margin: -22px;
 }
 .project-gridparis_Image-70 {
   grid-area: Image-70;
+  margin-top: -40px;
 }
 
 /* =======================================
@@ -289,11 +304,9 @@ a {
 .project-gridplattencover_Image-26 {
   grid-area: Image-26;
 }
-.project-gridplattencover_Image-25 {
-  grid-area: Image-25;
-}
 .project-gridplattencover_image-9 {
   grid-area: image-9;
+  margin-top: -50px;
 }
 .project-gridplattencover_image-10 {
   grid-area: image-10;
@@ -407,27 +420,19 @@ About me
 ======================================= */
 
 .project-gridblickwechsel {
+  margin-top: -30px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
-  padding: 0 15px 15px 15px;
+  padding: 0px 15px 15px 15px;
   grid-template-areas:
     "Image-79 Image-79 Image-79 Image-79"
-    "title title title title"
     ".  video-1 video-1 ." /* Zeile 2: Hier darf KEIN 'info' stehen */
     "Image-45 Image-45 Image-42 Image-42"
     "Image-43 Image-43 Image-44 Image-44"
     "Image-75 Image-75 Image-75 Image-75"
     "info info info info"
     ". text text ."; /* Zeile 7: HIER ist die richtige Position */
-}
-
-.project-gridblickwechsel_title {
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 0px;
-  font-size: 12px;
-  grid-area: title;
 }
 
 .project-gridblickwechsel_text {
@@ -464,24 +469,16 @@ About me
 }
 
 .project-gridbmw {
+  margin-top: -149.57px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
   padding: 0 15px 15px 15px;
   grid-template-areas:
     "image-6 image-6 image-6 image-6"
-    "title title title title"
     "image-7 image-7 image-8 image-8"
     "info info info info"
     ". text text .";
-}
-
-.project-gridbwm_title {
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 0px;
-  font-size: 12px;
-  grid-area: title;
 }
 
 .project-gridbwm_text {
@@ -491,6 +488,7 @@ About me
   line-height: 1.3;
   margin: 0;
   grid-area: text;
+  margin-top: -20px;
 }
 
 .project-gridbwm_info {
@@ -500,52 +498,34 @@ About me
   line-height: 1.3;
   margin: 0;
   grid-area: info;
+  margin-top: -20px;
 }
 
-/* --- Styling für die Info-Liste (Punkte entfernen) --- */
-
-.projekt-gridbwm_info ul {
-  list-style-type: none; /* WICHTIG: Entfernt die Punkte */
-  padding-left: 0; /* Entfernt den Standard-Einzug */
-  margin: 0; /* Entfernt unnötige Abstände */
+.project-grid_info ul {
+  list-style-type: none; /* WICHTIG: Entfernt den Punkt */
+  padding-left: 0;
 }
 
-/* --- Anpassung der H1-Schrift (falls du eine andere als die 12px möchtest) --- */
-
-.project-gridbwm_title h1 {
-  /* Fügt die Zentrierung hinzu und entfernt Standard-Margin des H1 */
-  text-align: inherit;
-  margin: 0;
+/* Spezifische BMW Info-Liste (Klasse im HTML: project-gridbwm_info) */
+.project-gridbwm_info ul {
+  list-style-type: none; /* WICHTIG: Entfernt den Punkt */
+  padding-left: 0;
 }
 
 /* Finde die bestehende .project-gridfarben Regel und ersetze sie damit: */
 .project-gridfarben {
+  margin-top: -87px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
   padding: 0 15px 15px 15px;
   grid-template-areas:
     "Image-35 Image-35 Image-35 Image-35"
-    "title title title title"
     "Image-34 Image-34 Image-38  Image-38"
     "Image-39 Image-39 Image-40 Image-40"
     "Image-37 Image-37 Image-37 Image-37"
     "info info info info"
     ". text text .";
-}
-
-.project-gridfarben_info {
-  grid-area: info;
-}
-
-/* --- Styling für den Titel (Abstände und Zentrierung) --- */
-
-.project-gridfarben_title {
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 0px;
-  font-size: 12px;
-  grid-area: title;
 }
 
 .project-gridfarben_text {
@@ -555,6 +535,7 @@ About me
   line-height: 1.3;
   margin: 0;
   grid-area: text;
+  margin-top: -6px;
 }
 
 .project-gridfarben_info {
@@ -564,6 +545,7 @@ About me
   line-height: 1.3;
   margin: 0;
   grid-area: info;
+  margin-top: -27px;
 }
 
 /* --- Styling für die Info-Liste (Punkte entfernen) --- */
@@ -576,6 +558,7 @@ About me
 
 /* Finde die bestehende .project-gridlondon Regel und ersetze sie damit: */
 .project-gridlondon {
+  margin-top: -73px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
@@ -583,7 +566,6 @@ About me
 
   grid-template-areas:
     "Image-61 Image-61 Image-61 Image-61"
-    "title title title title"
     " Image-46 Image-46 Image-57 Image-57"
     "Image-58 Image-58 Image-58 Image-58"
     "Image-47 Image-47 Image-53 Image-53"
@@ -595,18 +577,6 @@ About me
     ". text text .";
 }
 
-.project-gridlondon_info {
-  grid-area: info;
-}
-
-.project-gridlondon_title {
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 0px;
-  font-size: 12px;
-  grid-area: title;
-}
-
 .project-gridlondon_text {
   text-align: center;
   padding-bottom: 0px;
@@ -614,6 +584,7 @@ About me
   line-height: 1.3;
   margin: 0;
   grid-area: text;
+  margin-top: -130px;
 }
 
 .project-gridlondon_info {
@@ -623,6 +594,7 @@ About me
   line-height: 1.3;
   margin: 0;
   grid-area: info;
+  margin-top: -169px;
 }
 
 .project-gridlondon_info ul {
@@ -631,26 +603,19 @@ About me
 }
 
 .project-gridlutzwoche {
+  margin-top: -107px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
   padding: 0 15px 15px 15px;
-
   grid-template-areas:
     "Image-23 Image-23 Image-23 Image-23"
-    "title title title title"
     "Image-5 Image-5 Image-6 Image-6"
+    "image-17 image-17 image-18 image-18"
+    ". image-19 image-19 ."
     "Image-7 Image-7 Image-7 Image-7"
     "info info info info"
     ". text text .";
-}
-
-.project-gridlutzwoche_title {
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 0px;
-  font-size: 12px;
-  grid-area: title;
 }
 
 .project-gridlutzwoche_text {
@@ -660,6 +625,7 @@ About me
   line-height: 1.3;
   margin: 0;
   grid-area: text;
+  margin-top: -19px;
 }
 
 .project-gridlutzwoche_info {
@@ -669,9 +635,22 @@ About me
   line-height: 1.3;
   margin: 0;
   grid-area: info;
+  margin-top: -20px;
+}
+
+.project-grid_info ul {
+  list-style-type: none; /* WICHTIG: Entfernt den Punkt */
+  padding-left: 0;
+}
+
+/* Spezifische BMW Info-Liste (Klasse im HTML: project-gridbwm_info) */
+.project-gridlutzwoche_info ul {
+  list-style-type: none; /* WICHTIG: Entfernt den Punkt */
+  padding-left: 0;
 }
 
 .project-gridmasterabschluss {
+  margin-top: -20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
@@ -679,19 +658,9 @@ About me
   /* Grid-Layout für Masterabschluss (1 großes Bild oben, dann 2 kleine) */
   grid-template-areas:
     "Image-78 Image-78 Image-78 Image-78"
-    "title title title title"
     ". video-2 video-2 ."
-    "Image-12 Image-12 Image-12 Image-12"
     "info info info info"
     ". text text .";
-}
-
-.project-gridmasterabschluss_title {
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 0px;
-  font-size: 12px;
-  grid-area: title;
 }
 
 .project-gridmasterabschluss_text {
@@ -701,6 +670,7 @@ About me
   line-height: 1.3;
   margin: 0;
   grid-area: text;
+  margin-top: -25px;
 }
 
 .project-gridmasterabschluss_info {
@@ -710,9 +680,22 @@ About me
   line-height: 1.3;
   margin: 0;
   grid-area: info;
+  margin-top: -68px;
+}
+
+.project-grid_info ul {
+  list-style-type: none; /* WICHTIG: Entfernt den Punkt */
+  padding-left: 0;
+}
+
+/* Spezifische BMW Info-Liste (Klasse im HTML: project-gridbwm_info) */
+.project-gridmasterabschluss_info ul {
+  list-style-type: none; /* WICHTIG: Entfernt den Punkt */
+  padding-left: 0;
 }
 
 .project-gridparis {
+  margin-top: -110px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
@@ -720,7 +703,6 @@ About me
   /* KORRIGIERT: Reihenfolge Titel > Info > Text */
   grid-template-areas:
     "Image-33 Image-33 Image-33 Image-33"
-    "title title title title"
     "Image-64 Image-64 Image-69 Image-69"
     "Image-65 Image-65 Image-65 Image-65"
     "Image-68 Image-68 Image-67 Image-67"
@@ -730,14 +712,6 @@ About me
     ". text text .";
 }
 
-.project-gridparis_title {
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 0px;
-  font-size: 12px;
-  grid-area: title;
-}
-
 .project-gridparis_text {
   text-align: center;
   padding-bottom: 0px;
@@ -745,6 +719,7 @@ About me
   line-height: 1.3;
   margin: 0;
   grid-area: text;
+  margin-top: -65px;
 }
 
 .project-gridparis_info {
@@ -754,9 +729,22 @@ About me
   line-height: 1.3;
   margin: 0;
   grid-area: info;
+  margin-top: -102px;
+}
+
+.project-grid_info ul {
+  list-style-type: none; /* WICHTIG: Entfernt den Punkt */
+  padding-left: 0;
+}
+
+/* Spezifische BMW Info-Liste (Klasse im HTML: project-gridbwm_info) */
+.project-gridparis_info ul {
+  list-style-type: none; /* WICHTIG: Entfernt den Punkt */
+  padding-left: 0;
 }
 
 .project-gridplattencover {
+  margin-top: -160px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
@@ -764,22 +752,12 @@ About me
   /* Grid-Layout für Plattencover: 1 volles Bild, dann 5 weitere in Paaren */
   grid-template-areas:
     "Image-26 Image-26 Image-26 Image-26"
-    "title title title title"
     "image-9 image-9 image-9 image-9"
     "image-10 image-10 image-10 image-10"
     "image-11 image-11 image-12 image-12"
     "image-13 image-13 image-13 image-13"
-    "Image-25 Image-25 Image-25 Image-25"
     "info info info info"
     ". text text .";
-}
-
-.project-gridplattencover_title {
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 0px;
-  font-size: 12px;
-  grid-area: title;
 }
 
 .project-gridplattencover_text {
@@ -789,6 +767,7 @@ About me
   line-height: 1.3;
   margin: 0;
   grid-area: text;
+  margin-top: -20px;
 }
 
 .project-gridplattencover_info {
@@ -798,6 +777,18 @@ About me
   line-height: 1.3;
   margin: 0;
   grid-area: info;
+  margin-top: -20px;
+}
+
+.project-grid_info ul {
+  list-style-type: none; /* WICHTIG: Entfernt den Punkt */
+  padding-left: 0;
+}
+
+/* Spezifische BMW Info-Liste (Klasse im HTML: project-gridbwm_info) */
+.project-gridplattencover_info ul {
+  list-style-type: none; /* WICHTIG: Entfernt den Punkt */
+  padding-left: 0;
 }
 
 /* =======================================
