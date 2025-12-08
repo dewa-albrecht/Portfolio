@@ -468,6 +468,68 @@ About me
   margin: 0; /* Entfernt unnötige Abstände */
 }
 
+/* =======================================
+  BLICKWECHSEL GRID (Mobile First)
+======================================= */
+
+/* 1. MOBILE FIRST (STANDARD): Alles unter 768px */
+/* Hier wird alles in einer Spalte gestapelt */
+.project-gridblickwechsel {
+  margin-top: -30px;
+  display: grid;
+  /* 1 Spalte (Stacking) */
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0px 15px 15px 15px;
+
+  /* Die Elemente werden in dieser Reihenfolge von oben nach unten gestapelt */
+  grid-template-areas:
+    "Image-79"
+    "video-1"
+    "Image-45"
+    "Image-42"
+    "Image-43"
+    "Image-44"
+    "Image-75"
+    "info"
+    "text";
+}
+
+/* Optional: Korrektur der Ränder für die mobile Ansicht */
+.project-gridblickwechsel_video-1,
+.project-gridblickwechsel_Image-75 {
+  margin-top: 0;
+}
+
+/* 2. DESKTOP/TABLET (AB einer Mindestbreite von 768 Pixeln) */
+/* Die Media Query beginnt hier - das ist das Äquivalent zu Ihrer Vorstellung
+   einer speziellen "Desktop-Regel" */
+@media (min-width: 768px) {
+  .project-gridblickwechsel {
+    /* Das 4-spaltige Layout wird wieder aktiviert */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    /* Die komplexe Area-Definition für breitere Bildschirme */
+    grid-template-areas:
+      "Image-79 Image-79 Image-79 Image-79"
+      ".  video-1 video-1 ."
+      "Image-45 Image-45 Image-42 Image-42"
+      "Image-43 Image-43 Image-44 Image-44"
+      "Image-75 Image-75 Image-75 Image-75"
+      "info info info info"
+      ". text text .";
+  }
+
+  /* Wiederherstellung der ursprünglichen, größeren Ränder für Desktop */
+  .project-gridblickwechsel_video-1 {
+    margin-top: 53px;
+  }
+
+  .project-gridblickwechsel_Image-75 {
+    margin-top: 40px;
+  }
+}
+
 .project-gridbmw {
   margin-top: -149.57px;
   display: grid;
