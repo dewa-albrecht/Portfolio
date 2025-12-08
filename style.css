@@ -29,7 +29,7 @@ a {
 .body-startseite {
   height: 100vh;
   display: grid;
-  grid-template-rows: 34px auto;
+  grid-template-rows: 30px auto;
 }
 
 /* =======================================
@@ -419,6 +419,9 @@ About me
   Raster
 ======================================= */
 
+/* =======================================
+ Blickwechsel
+======================================= */
 .project-gridblickwechsel {
   margin-top: -30px;
   display: grid;
@@ -530,6 +533,9 @@ About me
   }
 }
 
+/* =======================================
+  BMW GRID 
+======================================= */
 .project-gridbmw {
   margin-top: -149.57px;
   display: grid;
@@ -574,7 +580,68 @@ About me
   padding-left: 0;
 }
 
-/* Finde die bestehende .project-gridfarben Regel und ersetze sie damit: */
+/* =======================================
+  BMW GRID (Mobile First)
+======================================= */
+
+/* 1. MOBILE FIRST (STANDARD): Für Handys und kleine Bildschirme (< 768px) */
+.project-gridbmw {
+  margin-top: 0; /* Negativen Margin entfernen */
+  display: grid;
+  /* Auf Mobilgeräten: Nur 1 Spalte (Stacking), alle Elemente stehen untereinander */
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+
+  /* Reihenfolge und Platzierung der gestapelten Elemente */
+  grid-template-areas:
+    "image-6"
+    "image-7"
+    "image-8"
+    "info"
+    "text";
+}
+
+/* Anpassung der Ränder für die mobile Ansicht */
+.project-gridbmw_image-6,
+.project-gridbmw_image-7,
+.project-gridbmw_image-8,
+.project-gridbwm_info,
+.project-gridbwm_text {
+  margin-top: 0;
+}
+
+/* 2. DESKTOP/TABLET LAYOUT (AB 768px Breite) */
+/* Mit dieser Media Query wird das komplexe 4-spaltige Layout nur auf breiteren Bildschirmen angewendet */
+@media (min-width: 768px) {
+  .project-gridbmw {
+    /* Setze den ursprünglichen negativen Margin-Top für den Desktop wieder ein */
+    margin-top: -149.57px;
+
+    /* Das 4-spaltige Layout wird wieder aktiviert */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    /* Die komplexe Area-Definition für breitere Bildschirme (wie ursprünglich) */
+    grid-template-areas:
+      "image-6 image-6 image-6 image-6"
+      "image-7 image-7 image-8 image-8"
+      "info info info info"
+      ". text text .";
+  }
+
+  /* Wiederherstellung der ursprünglichen Ränder für Desktop */
+  .project-gridbwm_info {
+    margin-top: -20px;
+  }
+
+  .project-gridbwm_text {
+    margin-top: -20px;
+  }
+}
+
+/* =======================================
+  Farben
+======================================= */
 .project-gridfarben {
   margin-top: -87px;
   display: grid;
@@ -610,15 +677,97 @@ About me
   margin-top: -27px;
 }
 
-/* --- Styling für die Info-Liste (Punkte entfernen) --- */
-
 .project-gridfarben_info ul {
   list-style-type: none; /* Entfernt die Punkte */
   padding-left: 0; /* Entfernt den Standard-Einzug */
   margin: 0; /* Entfernt unnötige Abstände */
 }
 
-/* Finde die bestehende .project-gridlondon Regel und ersetze sie damit: */
+/* =======================================
+  Farben GRID (Mobile First)
+======================================= */
+
+/* 1. MOBILE FIRST (STANDARD): Für Handys und kleine Bildschirme (< 768px) */
+.project-gridfarben {
+  margin-top: 0; /* Negativen Margin entfernen */
+  display: grid;
+  /* Auf Mobilgeräten: Nur 1 Spalte (Stacking), alle Elemente stehen untereinander */
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+
+  /* Reihenfolge und Platzierung der gestapelten Elemente */
+  grid-template-areas:
+    "Image-35"
+    "Image-34"
+    "Image-38"
+    "Image-39"
+    "Image-40"
+    "Image-37"
+    "info"
+    "text";
+}
+
+/* Anpassung der Ränder für die mobile Ansicht */
+.project-gridfarben_Image-35,
+.project-gridfarben_Image-34,
+.project-gridfarben_Image-37,
+.project-gridfarben_Image-38,
+.project-gridfarben_text,
+.project-gridfarben_info {
+  /* Alle spezifischen, negativen Margins für Mobile entfernen */
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. DESKTOP/TABLET LAYOUT (AB 768px Breite) */
+/* Die Media Query schaltet das Grid-Layout für breitere Bildschirme um */
+@media (min-width: 768px) {
+  .project-gridfarben {
+    /* Setze den ursprünglichen negativen Margin-Top für den Desktop wieder ein */
+    margin-top: -87px;
+
+    /* Das 4-spaltige Layout wird wieder aktiviert */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    /* Die komplexe Area-Definition für breitere Bildschirme (wie ursprünglich) */
+    grid-template-areas:
+      "Image-35 Image-35 Image-35 Image-35"
+      "Image-34 Image-34 Image-38  Image-38"
+      "Image-39 Image-39 Image-40 Image-40"
+      "Image-37 Image-37 Image-37 Image-37"
+      "info info info info"
+      ". text text .";
+  }
+
+  /* Wiederherstellung der ursprünglichen, spezifischen Ränder für Desktop */
+  .project-gridfarben_Image-35 {
+    margin: 10px;
+    margin-left: 40px;
+  }
+  .project-gridfarben_Image-34 {
+    margin-top: -18px;
+  }
+  .project-gridfarben_Image-37 {
+    margin-top: -30px;
+    margin-bottom: -30px;
+  }
+  .project-gridfarben_Image-38 {
+    margin-top: -23px;
+  }
+
+  .project-gridfarben_text {
+    margin-top: -6px;
+  }
+
+  .project-gridfarben_info {
+    margin-top: -27px;
+  }
+}
+
+/* =======================================
+London
+======================================= */
 .project-gridlondon {
   margin-top: -73px;
   display: grid;
@@ -663,7 +812,100 @@ About me
   list-style-type: none; /* Entfernt die Punkte */
   padding-left: 0; /* Entfernt den Standard-Einzug */
 }
+/* =======================================
+  LONDON GRID (Mobile First)
+======================================= */
 
+/* 1. MOBILE FIRST (STANDARD): Für Handys und kleine Bildschirme (< 768px) */
+.project-gridlondon {
+  margin-top: 0; /* Negativen Margin entfernen */
+  display: grid;
+  /* Auf Mobilgeräten: Nur 1 Spalte (Stacking), alle 11 Bilder und Texte stehen untereinander */
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+
+  /* Reihenfolge der gestapelten Elemente */
+  grid-template-areas:
+    "Image-61"
+    "Image-46"
+    "Image-57"
+    "Image-58"
+    "Image-47"
+    "Image-53"
+    "Image-54"
+    "Image-52"
+    "Image-49"
+    "Image-48"
+    "Image-27"
+    "info"
+    "text";
+}
+
+/* Anpassung der Ränder für die mobile Ansicht */
+/* Alle negativen/spezifischen Margins werden für Mobile entfernt, um sauberes Stapeln zu ermöglichen */
+.project-gridlondon_Image-27,
+.project-gridlondon_Image-46,
+.project-gridlondon_Image-57,
+.project-gridlondon_Image-58,
+.project-gridlondon_Image-47,
+.project-gridlondon_Image-53,
+.project-gridlondon_Image-54,
+.project-gridlondon_Image-52,
+.project-gridlondon_Image-49,
+.project-gridlondon_Image-48,
+.project-gridlondon_text,
+.project-gridlondon_info {
+  margin: 0;
+}
+
+/* 2. DESKTOP/TABLET LAYOUT (AB 768px Breite) */
+/* Die Media Query schaltet das komplexe Grid-Layout für breitere Bildschirme um */
+@media (min-width: 768px) {
+  .project-gridlondon {
+    /* Setze den ursprünglichen negativen Margin-Top für den Desktop wieder ein */
+    margin-top: -73px;
+
+    /* Das 4-spaltige Layout wird wieder aktiviert */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    /* Die komplexe Area-Definition für breitere Bildschirme (wie ursprünglich) */
+    grid-template-areas:
+      "Image-61 Image-61 Image-61 Image-61"
+      " Image-46 Image-46 Image-57 Image-57"
+      "Image-58 Image-58 Image-58 Image-58"
+      "Image-47 Image-47 Image-53 Image-53"
+      "Image-54 Image-54 Image-54 Image-54"
+      "Image-52 Image-52 Image-49 Image-49"
+      "Image-48 Image-48 Image-48 Image-48"
+      "Image-27 Image-27 Image-27 Image-27"
+      "info info info info"
+      ". text text .";
+  }
+
+  /* Wiederherstellung der ursprünglichen, spezifischen Ränder für Desktop */
+  .project-gridlondon_Image-27 {
+    margin-top: -160px;
+  }
+  .project-gridlondon_Image-46 {
+    margin-top: -20px;
+  }
+  .project-gridlondon_Image-57 {
+    margin-top: -20px;
+  }
+
+  .project-gridlondon_text {
+    margin-top: -130px;
+  }
+
+  .project-gridlondon_info {
+    margin-top: -169px;
+  }
+}
+
+/* =======================================
+Lutzwoche
+======================================= */
 .project-gridlutzwoche {
   margin-top: -107px;
   display: grid;
@@ -710,7 +952,80 @@ About me
   list-style-type: none; /* WICHTIG: Entfernt den Punkt */
   padding-left: 0;
 }
+/* =======================================
+  LUTZWoche GRID (Mobile First)
+======================================= */
 
+/* 1. MOBILE FIRST (STANDARD): Für Handys und kleine Bildschirme (< 768px) */
+.project-gridlutzwoche {
+  margin-top: 0; /* Negativen Margin entfernen */
+  display: grid;
+  /* Auf Mobilgeräten: Nur 1 Spalte (Stacking), alle Elemente stehen untereinander */
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+
+  /* Reihenfolge der gestapelten Elemente */
+  grid-template-areas:
+    "Image-23"
+    "Image-5"
+    "Image-6"
+    "image-17"
+    "image-18"
+    "image-19"
+    "Image-7"
+    "info"
+    "text";
+}
+
+/* Anpassung der Ränder für die mobile Ansicht */
+/* Alle spezifischen/negativen Margins werden für Mobile entfernt, um sauberes Stapeln zu gewährleisten */
+.project-gridlutzwoche_Image-5,
+.project-gridlutzwoche_Image-6,
+.project-gridlutzwoche_Image-7,
+.project-gridlutzwoche_Image-23,
+.project-gridlutzwoche_image-17,
+.project-gridlutzwoche_image-18,
+.project-gridlutzwoche_image-19,
+.project-gridlutzwoche_info,
+.project-gridlutzwoche_text {
+  margin: 0;
+}
+
+/* 2. DESKTOP/TABLET LAYOUT (AB 768px Breite) */
+/* Die Media Query schaltet das Grid-Layout für breitere Bildschirme um */
+@media (min-width: 768px) {
+  .project-gridlutzwoche {
+    /* Setze den ursprünglichen negativen Margin-Top für den Desktop wieder ein */
+    margin-top: -107px;
+
+    /* Das 4-spaltige Layout wird wieder aktiviert */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    /* Die komplexe Area-Definition für breitere Bildschirme (wie ursprünglich) */
+    grid-template-areas:
+      "Image-23 Image-23 Image-23 Image-23"
+      "Image-5 Image-5 Image-6 Image-6"
+      "image-17 image-17 image-18 image-18"
+      ". image-19 image-19 ."
+      "Image-7 Image-7 Image-7 Image-7"
+      "info info info info"
+      ". text text .";
+  }
+
+  /* Wiederherstellung der ursprünglichen, spezifischen Ränder für Desktop */
+  .project-gridlutzwoche_text {
+    margin-top: -19px;
+  }
+
+  .project-gridlutzwoche_info {
+    margin-top: -20px;
+  }
+}
+
+/* =======================================
+Master Abschluss
+======================================= */
 .project-gridmasterabschluss {
   margin-top: -20px;
   display: grid;
@@ -756,6 +1071,75 @@ About me
   padding-left: 0;
 }
 
+/* =======================================
+  MASTERABSCHLUSS GRID (Mobile First)
+======================================= */
+
+/* 1. MOBILE FIRST (STANDARD): Für Handys und kleine Bildschirme (< 768px) */
+.project-gridmasterabschluss {
+  margin-top: 0; /* Negativen Margin entfernen */
+  display: grid;
+  /* Auf Mobilgeräten: Nur 1 Spalte (Stacking), alle Elemente stehen untereinander */
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+
+  /* Reihenfolge der gestapelten Elemente */
+  grid-template-areas:
+    "Image-78"
+    "video-2"
+    "info"
+    "text";
+}
+
+/* Anpassung der Ränder für die mobile Ansicht */
+/* Alle spezifischen/negativen Margins werden für Mobile entfernt */
+.project-gridmasterabschluss_video-2 {
+  /* Margin wird für Mobile angepasst */
+  margin: 0;
+  padding: 0 15px; /* Etwas horizontaler Abstand, falls das Video sonst an den Rand stößt */
+}
+
+.project-gridmasterabschluss_info,
+.project-gridmasterabschluss_text {
+  margin: 0;
+}
+
+/* 2. DESKTOP/TABLET LAYOUT (AB 768px Breite) */
+/* Die Media Query schaltet das Grid-Layout für breitere Bildschirme um */
+@media (min-width: 768px) {
+  .project-gridmasterabschluss {
+    /* Setze den ursprünglichen negativen Margin-Top für den Desktop wieder ein */
+    margin-top: -20px;
+
+    /* Das 4-spaltige Layout wird wieder aktiviert */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    /* Die komplexe Area-Definition für breitere Bildschirme (wie ursprünglich) */
+    grid-template-areas:
+      "Image-78 Image-78 Image-78 Image-78"
+      ". video-2 video-2 ."
+      "info info info info"
+      ". text text .";
+  }
+
+  /* Wiederherstellung der ursprünglichen, spezifischen Ränder für Desktop */
+  .project-gridmasterabschluss_video-2 {
+    margin: 50px;
+  }
+
+  .project-gridmasterabschluss_text {
+    margin-top: -25px;
+  }
+
+  .project-gridmasterabschluss_info {
+    margin-top: -68px;
+  }
+}
+
+/* =======================================
+Paris
+======================================= */
 .project-gridparis {
   margin-top: -110px;
   display: grid;
@@ -805,6 +1189,101 @@ About me
   padding-left: 0;
 }
 
+/* =======================================
+  PARIS GRID (Mobile First)
+======================================= */
+
+/* 1. MOBILE FIRST (STANDARD): Für Handys und kleine Bildschirme (< 768px) */
+.project-gridparis {
+  margin-top: 0; /* Negativen Margin entfernen */
+  display: grid;
+  /* Auf Mobilgeräten: Nur 1 Spalte (Stacking), alle Elemente stehen untereinander */
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+
+  /* Reihenfolge der gestapelten Elemente */
+  grid-template-areas:
+    "Image-33"
+    "Image-64"
+    "Image-69"
+    "Image-65"
+    "Image-68"
+    "Image-67"
+    "Image-70"
+    "Image-63"
+    "info"
+    "text";
+}
+
+/* Anpassung der Ränder für die mobile Ansicht */
+/* Alle spezifischen/negativen Margins werden für Mobile entfernt, um sauberes Stapeln zu gewährleisten */
+.project-gridparis_Image-64,
+.project-gridparis_Image-65,
+.project-gridparis_Image-67,
+.project-gridparis_Image-68,
+.project-gridparis_Image-69,
+.project-gridparis_Image-70,
+.project-gridparis_info,
+.project-gridparis_text {
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. DESKTOP/TABLET LAYOUT (AB 768px Breite) */
+/* Die Media Query schaltet das Grid-Layout für breitere Bildschirme um */
+@media (min-width: 768px) {
+  .project-gridparis {
+    /* Setze den ursprünglichen negativen Margin-Top für den Desktop wieder ein */
+    margin-top: -110px;
+
+    /* Das 4-spaltige Layout wird wieder aktiviert */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    /* Die komplexe Area-Definition für breitere Bildschirme (wie ursprünglich) */
+    grid-template-areas:
+      "Image-33 Image-33 Image-33 Image-33"
+      "Image-64 Image-64 Image-69 Image-69"
+      "Image-65 Image-65 Image-65 Image-65"
+      "Image-68 Image-68 Image-67 Image-67"
+      "Image-70 Image-70 Image-70 Image-70"
+      "Image-63 Image-63 Image-63 Image-63"
+      "info info info info"
+      ". text text .";
+  }
+
+  /* Wiederherstellung der ursprünglichen, spezifischen Ränder für Desktop */
+  .project-gridparis_Image-64 {
+    margin: -20px;
+  }
+  .project-gridparis_Image-65 {
+    margin-top: -60px;
+  }
+  .project-gridparis_Image-67 {
+    margin-top: -40px;
+  }
+  .project-gridparis_Image-68 {
+    margin-top: -40px;
+  }
+  .project-gridparis_Image-69 {
+    margin: -22px;
+  }
+  .project-gridparis_Image-70 {
+    margin-top: -40px;
+  }
+
+  .project-gridparis_text {
+    margin-top: -65px;
+  }
+
+  .project-gridparis_info {
+    margin-top: -102px;
+  }
+}
+
+/* =======================================
+Plattencover
+======================================= */
 .project-gridplattencover {
   margin-top: -160px;
   display: grid;
@@ -851,6 +1330,78 @@ About me
 .project-gridplattencover_info ul {
   list-style-type: none; /* WICHTIG: Entfernt den Punkt */
   padding-left: 0;
+}
+
+/* =======================================
+  PLATTENCOVER GRID (Mobile First)
+======================================= */
+
+/* 1. MOBILE FIRST (STANDARD): Für Handys und kleine Bildschirme (< 768px) */
+.project-gridplattencover {
+  margin-top: 0; /* Negativen Margin entfernen */
+  display: grid;
+  /* Auf Mobilgeräten: Nur 1 Spalte (Stacking), alle Elemente stehen untereinander */
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 0 15px 15px 15px;
+
+  /* Reihenfolge der gestapelten Elemente */
+  grid-template-areas:
+    "Image-26"
+    "image-9"
+    "image-10"
+    "image-11"
+    "image-12"
+    "image-13"
+    "info"
+    "text";
+}
+
+/* Anpassung der Ränder für die mobile Ansicht */
+/* Alle spezifischen/negativen Margins werden für Mobile entfernt, um sauberes Stapeln zu gewährleisten */
+.project-gridplattencover_image-9,
+.project-gridplattencover_image-10,
+.project-gridplattencover_image-11,
+.project-gridplattencover_image-12,
+.project-gridplattencover_image-13,
+.project-gridplattencover_info,
+.project-gridplattencover_text {
+  margin: 0;
+}
+
+/* 2. DESKTOP/TABLET LAYOUT (AB 768px Breite) */
+/* Die Media Query schaltet das Grid-Layout für breitere Bildschirme um */
+@media (min-width: 768px) {
+  .project-gridplattencover {
+    /* Setze den ursprünglichen negativen Margin-Top für den Desktop wieder ein */
+    margin-top: -160px;
+
+    /* Das 4-spaltige Layout wird wieder aktiviert */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    /* Die komplexe Area-Definition für breitere Bildschirme (wie ursprünglich) */
+    grid-template-areas:
+      "Image-26 Image-26 Image-26 Image-26"
+      "image-9 image-9 image-9 image-9"
+      "image-10 image-10 image-10 image-10"
+      "image-11 image-11 image-12 image-12"
+      "image-13 image-13 image-13 image-13"
+      "info info info info"
+      ". text text .";
+  }
+
+  /* Wiederherstellung der ursprünglichen, spezifischen Ränder für Desktop */
+  .project-gridplattencover_image-9 {
+    margin-top: -50px;
+  }
+
+  .project-gridplattencover_text {
+    margin-top: -20px;
+  }
+
+  .project-gridplattencover_info {
+    margin-top: -20px;
+  }
 }
 
 /* =======================================
