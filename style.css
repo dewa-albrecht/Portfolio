@@ -871,7 +871,6 @@ About me
   /* NEUES Grid-Layout: Sprachen in Spalte 2, Software in Spalte 3 */
   grid-template-areas:
     "image image image image"
-    "title title title title"
     ". text text ."
     ". languages software ."; /* Sprachen in Spalte 2, Software in Spalte 3 */
 }
@@ -890,6 +889,7 @@ About me
   margin: 0; /* Entfernt die Zentrierungsmargins */
   width: 100%;
   max-width: none;
+  font-size: 18px;
 }
 
 .software {
@@ -897,30 +897,26 @@ About me
   margin: 0; /* Entfernt die Zentrierungsmargins */
   width: 100%;
   max-width: none;
+  font-size: 18px;
 }
 
 /* =======================================
   ABOUT ME (Generisches Styling)
 ======================================= */
 
-/* Behält die anderen Styles bei, falls sie noch fehlen */
-.project-grid_title {
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 0;
-  grid-area: title;
-}
 .project-grid_text {
   grid-area: text;
   margin: 0 auto;
   font-size: 18px;
   text-align: center;
+  font-size: 18px;
 }
 
 .languages h3,
 .software h3 {
   margin-top: 20px;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .languages td:last-child,
@@ -928,4 +924,5 @@ About me
   text-align: right;
   letter-spacing: 2px;
   border-right: none;
+  font-size: 18px;
 }
