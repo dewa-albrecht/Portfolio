@@ -1511,6 +1511,8 @@ Plattencover
   width: 100%;
   max-width: none;
   font-size: 18px;
+
+  /*letter-spacing: 0.2px;*/
 }
 
 /* =======================================
@@ -1527,6 +1529,7 @@ Plattencover
 
 .languages h3,
 .software h3 {
+  text-align: left;
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 18px;
@@ -1534,8 +1537,8 @@ Plattencover
 
 .languages td:last-child,
 .software td:last-child {
-  text-align: right;
-  letter-spacing: 2px;
+  text-align: left;
+  letter-spacing: 0.2px;
   border-right: none;
   font-size: 18px;
 }
